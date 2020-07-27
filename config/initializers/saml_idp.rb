@@ -1,5 +1,5 @@
 SamlIdp.configure do |config|
-  base = 'http://localhost:3000'
+  base = Rails.configuration.x.saml_idp_base
 
   config.x509_certificate = <<~CERT
     -----BEGIN CERTIFICATE-----
