@@ -95,6 +95,8 @@ GEM
     loofah (2.6.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    macaddr (1.7.2)
+      systemu (~> 2.6.5)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
@@ -152,6 +154,11 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rubyzip (2.3.0)
+    saml_idp (0.9.0)
+      activesupport (>= 3.2)
+      builder (>= 3.0)
+      nokogiri (>= 1.6.2)
+      uuid (>= 2.3)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -177,6 +184,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    systemu (2.6.5)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -185,6 +193,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    uuid (2.3.9)
+      macaddr (~> 1.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.4)
@@ -203,6 +213,13 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xmlenc (0.7.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      nokogiri (>= 1.6.0, < 2.0.0)
+      xmlmapper (>= 0.7.3)
+    xmlmapper (0.7.3)
+      nokogiri (~> 1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.4.0)
@@ -219,6 +236,7 @@ DEPENDENCIES
   listen (~> 3.2)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
+  saml_idp
   sass-rails (>= 6)
   selenium-webdriver
   spring
@@ -229,6 +247,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
+  xmlenc
 
 RUBY VERSION
    ruby 2.7.1p83
