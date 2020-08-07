@@ -126,21 +126,21 @@ SamlIdp.configure do |config|
   # config.technical_contact.email_address = "example@example.com"
 
   service_providers = {
-    'http://localhost:3001/saml' => {
+    'http://127.0.0.1:3001/saml' => {
       fingerprint: ENV.fetch('SAML_SP_FINGERPRINT'),
-      metadata_url: 'http://localhost:3001/saml/metadata',
+      metadata_url: 'http://127.0.0.1:3001/saml/metadata',
 
       # We now validate AssertionConsumerServiceURL will match the MetadataURL set above.
       # *If* it's not going to match your Metadata URL's Host, then set this so we can validate the host using this list
-      response_hosts: ['http://localhost:3001']
+      response_hosts: ['http://127.0.0.1:3001']
     },
-    'http://localhost:5001/api/saml/pepsico/metadata' => {
+    'http://127.0.0.1:5001/api/saml/pepsico/metadata' => {
       fingerprint: ENV.fetch('SAML_SP_FINGERPRINT'),
-      metadata_url: 'http://localhost:5001/api/saml/pepsico/metadata',
+      metadata_url: 'http://127.0.0.1:5001/api/saml/pepsico/metadata',
 
       # We now validate AssertionConsumerServiceURL will match the MetadataURL set above.
       # *If* it's not going to match your Metadata URL's Host, then set this so we can validate the host using this list
-      response_hosts: ['http://localhost:5001']
+      response_hosts: ['http://127.0.0.1:5001']
     }
   }
 
