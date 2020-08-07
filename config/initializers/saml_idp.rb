@@ -127,7 +127,7 @@ SamlIdp.configure do |config|
 
   service_providers = {
     'http://localhost:3001/saml' => {
-      fingerprint: '9E:65:2E:03:06:8D:80:F2:86:C7:6C:77:A1:D9:14:97:0A:4D:F4:4D',
+      fingerprint: ENV.fetch('SAML_SP_FINGERPRINT'),
       metadata_url: 'http://localhost:3001/saml/metadata',
 
       # We now validate AssertionConsumerServiceURL will match the MetadataURL set above.
@@ -170,6 +170,7 @@ SamlIdp.configure do |config|
 
   # Find ServiceProvider metadata_url and fingerprint based on our settings
   config.service_provider.finder = lambda { |issuer_or_entity_id|
+    puts '****** ISSUER: ', issuer_or_entity_id
     service_providers[issuer_or_entity_id]
   }
 end
