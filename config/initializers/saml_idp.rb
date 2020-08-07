@@ -133,6 +133,14 @@ SamlIdp.configure do |config|
       # We now validate AssertionConsumerServiceURL will match the MetadataURL set above.
       # *If* it's not going to match your Metadata URL's Host, then set this so we can validate the host using this list
       response_hosts: ['http://localhost:3001']
+    },
+    'http://localhost:5001/api/saml/pepsico/metadata' => {
+      fingerprint: ENV.fetch('SAML_SP_FINGERPRINT'),
+      metadata_url: 'http://localhost:5001/api/saml/pepsico/metadata',
+
+      # We now validate AssertionConsumerServiceURL will match the MetadataURL set above.
+      # *If* it's not going to match your Metadata URL's Host, then set this so we can validate the host using this list
+      response_hosts: ['http://localhost:5001']
     }
   }
 
