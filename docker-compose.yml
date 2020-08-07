@@ -8,6 +8,8 @@ services:
     volumes:
       - .:/usr/src/app
       - gem_cache:/gems
+    env_file:
+      - .env
 
 volumes:
   gem_cache:
