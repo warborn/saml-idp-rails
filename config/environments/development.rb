@@ -62,5 +62,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.x.saml_idp_base = 'http://localhost:3000'
+  config.x.saml_idp_base = 'http://127.0.0.1:3000'
 end
